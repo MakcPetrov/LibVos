@@ -5,7 +5,7 @@ class Set {//параметры программы
 
     //TODO сделать чтение, сохранение и окно настроек
     static final String TAG = "LbVos_: ";
-    static final String url = "jdbc:mysql://petrov:3306/library?serverTimezone=Europe/Moscow";
+    static final String url = "jdbc:mysql://localhost:3306/library?serverTimezone=Europe/Moscow";
     static final String user = "user";
     static final String password = "1111";
 
