@@ -1,6 +1,6 @@
 package petrov;
 
-public class Main {
+public class LibVos {
 
     public static void main(String[] args) {
 
