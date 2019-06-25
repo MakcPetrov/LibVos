@@ -9,15 +9,13 @@ class MainWindow extends JFrame {
     private JPanel loginPanel;//панель авторизации
     private JPanel controlPanel;//панель команд
 
-    void MainWindows(User user){
+    MainWindow(User user){
 
         //описание основного окна программы
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setSize(600, 400);
         setLocationRelativeTo(null);
         setResizable(true);//а пусть будет
-
-
 
         //панель авторизации
         loginPanel = new JPanel(new GridLayout(1, 3));

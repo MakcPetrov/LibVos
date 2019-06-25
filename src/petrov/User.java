@@ -2,10 +2,7 @@ package petrov;
 
 public class User { //свойства клиента TODO внести сюда чтение из базы юзеров
 
-
-    public User(DBManager data) {
-        //DBManager dataManager =data;
-    }
+    public User() {  }
 
     private boolean online;//прошёл проверку
     private String nick;//имя
@@ -42,7 +39,7 @@ public class User { //свойства клиента TODO внести сюда
     void auth(String login, String password) {
         //TODO запрос к базе (AUTH + " " + login + " " + password);, а пока всё счиитаем ОК
         String psh="71";
-        if (Vars.debug_mode) System.out.println(login + password);
+        if (Set.debug_mode) System.out.println(login + password);
 
 //        if (DBManager.getInstance().checkUser(login, password))
         if (DBManager.checkUser(login, password))
@@ -50,16 +47,15 @@ public class User { //свойства клиента TODO внести сюда
             nick = "Гыук"; //заглушка
             online = true;
             admin = true;
-            if (Vars.debug_mode) System.out.println("OK");
+            if (Set.debug_mode) System.out.println("OK");
         }//логин успешен
         else
         {//логин неуспешен
             nick = ""; //заглушка
             online = false;
             admin = false;
-            if (Vars.debug_mode) System.out.println("DEN");
+            if (Set.debug_mode) System.out.println("DEN");
         }//логин неуспешен
     }
-
 
 }//User

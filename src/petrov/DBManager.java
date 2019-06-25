@@ -8,11 +8,37 @@ import java.sql.Statement;
 
 class DBManager {//Менеджер базы данных
     //private static volatile DBManager instance;
-    //TODO: сделать лог-файл if (Vars.debug_mode)
+    //TODO: сделать лог-файл if (Set.debug_mode)
 
+    private static Connection connection;
+    private static Statement statement;
+    private static ResultSet resultSet;
 
-    static private Connection connect;
-    static private Statement statement;
+    static String testDB() {
+        String query = "select count(*) from books";
+
+        try {
+            connection = DriverManager.getConnection(Set.url, Set.user, Set.password);
+            statement = connection.createStatement();
+            resultSet = statement.executeQuery(query);
+
+            while (resultSet.next()) {
+                int count = resultSet.getInt(1);
+                return "Total number of books in the table : " + count;
+                //if (Set.debug_mode)System.out.println("Total number of books in the table : " + count);
+            }
+
+        } catch (SQLException sqlEx) {
+            sqlEx.printStackTrace();
+            return "SQL access Error";
+        } finally {
+            //close connection ,statement and resultset here
+            try { connection.close(); } catch(SQLException se) {}
+            try { statement.close(); } catch(SQLException se) {}
+            try { resultSet.close(); } catch(SQLException se) {}
+        }
+        return "SQL access Error";
+    }
 
 
     static boolean checkUser(String login, String password)
@@ -33,12 +59,12 @@ class DBManager {//Менеджер базы данных
 //    private DBManager() {//конструктор + подключение к БД
 //        try {
 //            Class.forName("org.mysql.JDBC");
-//            connect = DriverManager.getConnection("jdbc:mysql:"+ Vars.BDpath);
+//            connect = DriverManager.getConnection("jdbc:mysql:"+ Set.BDpath);
 //            statement = connect.createStatement();
-//            if (Vars.debug_mode) System.out.println("connect BD");
+//            if (Set.debug_mode) System.out.println("connect BD");
 //            if (newBase) { //создать базу с нуля
-//                failure=newBase(Vars.clientsBD);
-//                failure=newBase(Vars.booksBD);
+//                failure=newBase(Set.clientsBD);
+//                failure=newBase(Set.booksBD);
 //            }//создать базу с нуля
 //        } catch (SQLException | ClassNotFoundException e) {
 //            failure=true;//авария (потом проверять будем)
@@ -58,44 +84,6 @@ class DBManager {//Менеджер базы данных
 //        }
 //        return localInstance;
 //    }
-
-    // JDBC URL, username and password of MySQL server
-    private static final String url = "jdbc:mysql://petrov:3306/library?serverTimezone=Europe/Moscow";
-    private static final String user = "user";
-    private static final String password = "1111";
-
-    // JDBC variables for opening and managing connection
-    private static Connection con;
-    private static Statement stmt;
-    private static ResultSet rs;
-
-    static void testDB() {
-        String query = "select count(*) from books";
-
-        try {
-            // opening database connection to MySQL server
-            con = DriverManager.getConnection(url, user, password);
-
-            // getting Statement object to execute query
-            stmt = con.createStatement();
-
-            // executing SELECT query
-            rs = stmt.executeQuery(query);
-
-            while (rs.next()) {
-                int count = rs.getInt(1);
-                System.out.println("Total number of books in the table : " + count);
-            }
-
-        } catch (SQLException sqlEx) {
-            sqlEx.printStackTrace();
-        } finally {
-            //close connection ,stmt and resultset here
-            try { con.close(); } catch(SQLException se) { /*can't do anything */ }
-            try { stmt.close(); } catch(SQLException se) { /*can't do anything */ }
-            try { rs.close(); } catch(SQLException se) { /*can't do anything */ }
-        }
-    }
 
 }
 
