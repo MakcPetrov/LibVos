@@ -19,7 +19,9 @@ class MainWindow extends JFrame {
 
         //панель авторизации
         loginPanel = new JPanel(new GridLayout(1, 3));
+
         JTextField login = new JTextField();
+        JTextField test = new JTextField();
         JPasswordField password = new JPasswordField();
         //что делать с введенным
         password.addActionListener(e -> {//ентер пассворд
@@ -34,9 +36,13 @@ class MainWindow extends JFrame {
             switchWindows(user);//включаем в актуальный режим
             password.setText("");
         });//кнопка авторизации
+
+        test.setText(DBManager.testDB());
+        loginPanel.add(test);
         loginPanel.add(login);
         loginPanel.add(password);
         loginPanel.add(authIn);
+
 
         //панель команд
         controlPanel = new JPanel(new GridLayout(1, 2));//сюда складываем элементы управления

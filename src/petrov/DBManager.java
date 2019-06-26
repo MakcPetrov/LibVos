@@ -24,7 +24,7 @@ class DBManager {//Менеджер базы данных
 
             while (resultSet.next()) {
                 int count = resultSet.getInt(1);
-                return "Total number of books in the table : " + count;
+                return "items: " + count;
                 //if (Set.debug_mode)System.out.println("Total number of books in the table : " + count);
             }
 
