@@ -74,6 +74,7 @@ class MainWindow extends JFrame {
         JButton preferencesButton = new JButton(Set.preferences);
         preferencesButton.addActionListener(e -> {
             Set.out(Set.preferences);
+            Preferences preferences = new Preferences();
         });
 
         JButton logsButton = new JButton(Set.logs);

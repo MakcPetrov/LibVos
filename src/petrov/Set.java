@@ -14,6 +14,8 @@ class Set {//параметры программы
     static String testUser ="morph";
     static String loginBt ="login";
     static String books ="books";
+    static String ovner ="ovner";
+    static String path ="path";
     static String newBook = "newBooks";
     static String users = "users";
     static String newUser = "newUser";
