@@ -17,37 +17,30 @@ class MainWindow extends JFrame {
         setLocationRelativeTo(null);
         setResizable(true);//а пусть будет
 
-        //панель авторизации
-        loginPanel = new JPanel(new GridLayout(1, 3));
         JTextField login = new JTextField();
         JPasswordField password = new JPasswordField();
-        //что делать с введенным
+
+        //панель авторизации
+        loginPanel = new JPanel(new GridLayout(1, 3));
+        login.setText(user.getNick());
         password.addActionListener(e -> {//ентер пассворд
             user.auth(login.getText(), new String(password.getPassword()));
             switchWindows(user);//включаем в актуальный режим
             password.setText("");
         });//password.ActionListener
-
-        JButton authIn = new JButton("Login");//кнопка авторизации
+        JButton authIn = new JButton(Set.loginBt);//кнопка авторизации
         authIn.addActionListener(e -> {
             user.auth(login.getText(), new String(password.getPassword()));
             switchWindows(user);//включаем в актуальный режим
             password.setText("");
         });//кнопка авторизации
+
         loginPanel.add(login);
         loginPanel.add(password);
         loginPanel.add(authIn);
 
         //панель команд
         controlPanel = new JPanel(new GridLayout(1, 2));//сюда складываем элементы управления
-        JButton authOut = new JButton("Logout");//кнопка выхода
-        authOut.addActionListener(e -> {
-            user.setOffline();
-            switchWindows(user);//включаем в актуальный режим
-            login.setText("");//обнулить имя
-            //password.setText("");
-        });//кнопка авторизации
-        controlPanel.add(authOut);
 
         //рабочая панель
         workPanel = new JPanel(new GridLayout(20, 3));
@@ -55,43 +48,75 @@ class MainWindow extends JFrame {
         username.setText(user.getNick());
         workPanel.add(username);
 
-        JButton bookList = new JButton("Books");//кнопка авторизации
-        bookList.addActionListener(e -> {
-            Set.out("BookList");
-        });//кнопка bookList
+        //кнопки вызова режимов работы
 
-        JButton userList = new JButton("Users");//кнопка авторизации
-        userList.addActionListener(e -> {
-            Set.out("UserList");
-        });//кнопка userList
+        JButton bookListButon = new JButton(Set.books);
+        bookListButon.addActionListener(e -> {
+            Set.out(Set.books);
+            BookList bookList = new BookList();
+        });
 
-        JButton control = new JButton("Control");//кнопка авторизации
-        control.addActionListener(e -> {
-            Set.out("control");
-        });//кнопка control
+        JButton newBookButton = new JButton(Set.newBook);
+        newBookButton.addActionListener(e -> {
+            Set.out(Set.newBook);
+        });
 
-        workPanel.add(bookList);
-        workPanel.add(userList);
-        workPanel.add(control);
+        JButton userListButton = new JButton(Set.users);
+        userListButton.addActionListener(e -> {
+            Set.out(Set.users);
+        });
 
+        JButton newUserButton = new JButton(Set.newUser);
+        newUserButton.addActionListener(e -> {
+            Set.out(Set.newUser);
+        });
 
+        JButton preferencesButton = new JButton(Set.preferences);
+        preferencesButton.addActionListener(e -> {
+            Set.out(Set.preferences);
+        });
 
+        JButton logsButton = new JButton(Set.logs);
+        logsButton.addActionListener(e -> {
+            Set.out(Set.logs);
+        });
 
+        JButton listsButton = new JButton(Set.lists);
+        listsButton.addActionListener(e -> {
+            Set.out(Set.lists);
+        });
+
+        JButton logoutButton  = new JButton("Logout");//кнопка выхода
+        logoutButton.addActionListener(e -> {
+            user.setOffline();
+            switchWindows(user);//включаем в актуальный режим
+            //login.setText("");//обнулить имя
+            password.setText("");
+        });
+
+        workPanel.add(bookListButon);
+        workPanel.add(newBookButton);
+        workPanel.add(userListButton);
+        workPanel.add(newUserButton);
+        workPanel.add(logsButton);
+        workPanel.add(listsButton);
+
+        workPanel.add(preferencesButton);
+        workPanel.add(logoutButton);
 
         add(workPanel, BorderLayout.CENTER);//главное окно занимает весь бокс
         add(loginPanel, BorderLayout.NORTH);//сверху панель логина
         add(controlPanel, BorderLayout.SOUTH);//снизу элементы ввода
         switchWindows(user);//включаем в актуальный режим
         setVisible(true);
-
     }//MainWindow
 
     private void switchWindows(User user) {//меняем вид окна при подключении-отключении
         setTitle(user.getNick());//меняем имя окна
         loginPanel.setVisible(!user.isOnline());//показывать, если юзера нет
         workPanel.setVisible(user.isOnline());//показывать, если юзер онлайн
-        controlPanel.setVisible(user.isOnline());//показывать, если юзер онлайн
+        controlPanel.setVisible(true);//показывать
+//        controlPanel.setVisible(user.isOnline());//показывать, если юзер онлайн
     }//switchWindows
-
 
 }
