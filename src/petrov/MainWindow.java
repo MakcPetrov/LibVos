@@ -13,7 +13,7 @@ class MainWindow extends JFrame {
 
         //описание основного окна программы
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        setSize(600, 400);
+        setSize(800, 600);
         setLocationRelativeTo(null);
         setResizable(true);//а пусть будет
 
@@ -57,9 +57,32 @@ class MainWindow extends JFrame {
 
         //рабочая панель
         workPanel = new JPanel(new GridLayout(20, 3));
-//        JTextField username = new JTextField();
-//        username.setText(user.getNick());
-//        workPanel.add(username);
+        JTextField username = new JTextField();
+        username.setText(user.getNick());
+        workPanel.add(username);
+
+        JButton bookList = new JButton("Books");//кнопка авторизации
+        bookList.addActionListener(e -> {
+            Set.out("BookList");
+        });//кнопка bookList
+
+        JButton userList = new JButton("Users");//кнопка авторизации
+        userList.addActionListener(e -> {
+            Set.out("UserList");
+        });//кнопка userList
+
+        JButton control = new JButton("Control");//кнопка авторизации
+        control.addActionListener(e -> {
+            Set.out("control");
+        });//кнопка control
+
+        workPanel.add(bookList);
+        workPanel.add(userList);
+        workPanel.add(control);
+
+
+
+
 
         add(workPanel, BorderLayout.CENTER);//главное окно занимает весь бокс
         add(loginPanel, BorderLayout.NORTH);//сверху панель логина

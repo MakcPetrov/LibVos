@@ -9,19 +9,21 @@ public class User { //свойства клиента TODO внести сюда
     private boolean admin;//библиотекарь
 
     boolean isOnline() {
+//        Set.out(nick + " online "+online);
         return online;
     }
 
-    void setOnline() {
-        this.online = true;
-    }
+//    void setOnline() {
+//        this.online = true;
+//        Set.out(nick + "  in");
+//    }
 
     void setOffline() {
         this.online = false;
+        Set.out(nick + " out");
     }
 
-    String getNick() {
-        return nick;
+    String getNick() { return nick;
     }
 
 //    void setNick(String nick) {
@@ -37,25 +39,28 @@ public class User { //свойства клиента TODO внести сюда
 //    }
 
     void auth(String login, String password) {
-        //TODO запрос к базе (AUTH + " " + login + " " + password);, а пока всё счиитаем ОК
-        String psh="71";
-        if (Set.debug_mode) System.out.println(login + password);
 
-//        if (DBManager.getInstance().checkUser(login, password))
-        if (DBManager.checkUser(login, password))
-        {//логин успешен
-            nick = "Гыук"; //заглушка
+        if(Set.debug_mode){//пропускаем логин, ставим юзера по дефолту
+            String psh="71";
+            nick = "tUser"; //заглушка
             online = true;
             admin = true;
-            if (Set.debug_mode) System.out.println("OK");
-        }//логин успешен
-        else
-        {//логин неуспешен
-            nick = ""; //заглушка
-            online = false;
-            admin = false;
-            if (Set.debug_mode) System.out.println("DEN");
-        }//логин неуспешен
+            Set.out( getNick()+ " GRANTED");
+        }else
+//       if (DBManager.getInstance().checkUser(login, password))
+            if (DBManager.checkUser(login, password))
+            {//логин успешен
+                nick = "Гыук"; //заглушка
+                online = true;
+                admin = true;
+                Set.out( getNick()+ " GRANTED");
+            }//логин успешен
+            else
+            {//логин неуспешен
+                nick = ""; //заглушка
+                online = false;
+                admin = false;
+                if (Set.debug_mode) System.out.println(" DENIED");
+            }//логин неуспешен
     }
-
 }//User
