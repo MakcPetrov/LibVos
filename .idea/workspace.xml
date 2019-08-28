@@ -3,9 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="6ca5e09a-1842-474b-ba55-ec3ef61d6a1e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/petrov/BookList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/petrov/BookListWindow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/petrov/MainWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/petrov/MainWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/petrov/Preferences.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/petrov/Preferences.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/petrov/Preferences.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/petrov/PreferencesWindows.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/petrov/Set.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/petrov/Set.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/petrov/UserList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/petrov/UserListWindow.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -174,7 +176,14 @@
       <option name="project" value="LOCAL" />
       <updated>1566996665341</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="mysql added">
+      <created>1566997608439</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1566997608439</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

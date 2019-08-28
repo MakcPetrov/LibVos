@@ -16,7 +16,7 @@ class MainWindow extends JFrame {
         setSize(800, 600);
         setLocationRelativeTo(null);
         setResizable(true);//а пусть будет
-
+        setTitle(Set.TAG);
         JTextField login = new JTextField();
         JPasswordField password = new JPasswordField();
 
@@ -53,7 +53,7 @@ class MainWindow extends JFrame {
         JButton bookListButon = new JButton(Set.books);
         bookListButon.addActionListener(e -> {
             Set.out(Set.books);
-            BookList bookList = new BookList();
+            BookListWindow bookListWindow = new BookListWindow();
         });
 
         JButton newBookButton = new JButton(Set.newBook);
@@ -74,7 +74,7 @@ class MainWindow extends JFrame {
         JButton preferencesButton = new JButton(Set.preferences);
         preferencesButton.addActionListener(e -> {
             Set.out(Set.preferences);
-            Preferences preferences = new Preferences();
+            PreferencesWindows preferencesWindows = new PreferencesWindows();
         });
 
         JButton logsButton = new JButton(Set.logs);
@@ -95,6 +95,13 @@ class MainWindow extends JFrame {
             password.setText("");
         });
 
+        JButton exitButon = new JButton(Set.exit);
+        exitButon.addActionListener(e -> {
+            Set.out(Set.exit);
+            System.exit(1);
+//            setVisible(false);
+        });
+
         workPanel.add(bookListButon);
         workPanel.add(newBookButton);
         workPanel.add(userListButton);
@@ -104,6 +111,7 @@ class MainWindow extends JFrame {
 
         workPanel.add(preferencesButton);
         workPanel.add(logoutButton);
+        workPanel.add(exitButon);
 
         add(workPanel, BorderLayout.CENTER);//главное окно занимает весь бокс
         add(loginPanel, BorderLayout.NORTH);//сверху панель логина

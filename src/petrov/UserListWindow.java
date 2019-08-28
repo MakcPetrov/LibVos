@@ -2,8 +2,8 @@ package petrov;
 
 import javax.swing.*;
 
-public class UserList extends JFrame {
-    UserList(){
+public class UserListWindow extends JFrame {
+    UserListWindow(){
     Set.out("UserList created");
 
     }//UserList
