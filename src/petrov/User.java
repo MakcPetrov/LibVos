@@ -20,10 +20,14 @@ public class User { //свойства клиента TODO внести сюда
 
     void setOffline() {
         this.online = false;
+        this.nick=Set.noUser;
         Set.out(nick + " out");
     }
 
-    String getNick() { return nick;
+    String getNick() {
+        if (nick==null) nick = Set.noUser;
+        //Set.out("get "+nick);
+    return nick;
     }
 
 //    void setNick(String nick) {
@@ -41,8 +45,7 @@ public class User { //свойства клиента TODO внести сюда
     void auth(String login, String password) {
 
         if(Set.debug_mode){//пропускаем логин, ставим юзера по дефолту
-            String psh="71";
-            nick = "tUser"; //заглушка
+            nick = Set.testUser; //заглушка
             online = true;
             admin = true;
             Set.out( getNick()+ " GRANTED");
@@ -50,14 +53,13 @@ public class User { //свойства клиента TODO внести сюда
 //       if (DBManager.getInstance().checkUser(login, password))
             if (DBManager.checkUser(login, password))
             {//логин успешен
-                nick = "Гыук"; //заглушка
                 online = true;
                 admin = true;
                 Set.out( getNick()+ " GRANTED");
             }//логин успешен
             else
             {//логин неуспешен
-                nick = ""; //заглушка
+                nick = Set.noUser;
                 online = false;
                 admin = false;
                 if (Set.debug_mode) System.out.println(" DENIED");

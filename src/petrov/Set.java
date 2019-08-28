@@ -9,6 +9,19 @@ class Set {//параметры программы
     static String user = "user";//логин-пароль СУБД
     static String password = "1111";//логин-пароль СУБД
 
+    //имена объектов
+    static String noUser ="zombie";
+    static String testUser ="morph";
+    static String loginBt ="login";
+    static String books ="books";
+    static String newBook = "newBooks";
+    static String users = "users";
+    static String newUser = "newUser";
+    static String preferences = "Preferences";
+    static String logs = "logs";
+    static String lists = "lists";
+
+
     static void out(String logString){//вывод строки в лог TODO сделать возможность вывода в файл и т.п.
         if (debug_mode) System.out.println(TAG + logString);
     }//out вывод строки в лог
