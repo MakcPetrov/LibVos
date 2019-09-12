@@ -2,19 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6ca5e09a-1842-474b-ba55-ec3ef61d6a1e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/petrov/Book.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/petrov/BookListWindow.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/petrov/DBManager.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/petrov/LibVos.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/petrov/User.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/petrov/UserListWindow.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/petrov/Book.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/petrov/BookListWindow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/petrov/DBManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/petrov/LibVos.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/petrov/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/petrov/UserListWindow.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/petrov/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -200,7 +189,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568317492208</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="mysql added">
+      <created>1568318404457</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1568318404457</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
