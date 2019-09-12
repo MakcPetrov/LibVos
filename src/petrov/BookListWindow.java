@@ -8,9 +8,9 @@ public class BookListWindow extends JFrame {
         setSize(600, 400);
         setLocationRelativeTo(null);
         setResizable(true);//а пусть будет
-        setTitle(Set.books);
+        setTitle(Set.INSTANCE.getBooks());
 
-        Set.out("BookList created");
+        Set.INSTANCE.out("BookList created");
     }//BookList
 
 }

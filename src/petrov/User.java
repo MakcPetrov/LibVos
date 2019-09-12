@@ -20,12 +20,12 @@ public class User { //свойства клиента TODO внести сюда
 
     void setOffline() {
         this.online = false;
-        this.nick=Set.noUser;
-        Set.out(nick + " out");
+        this.nick= Set.INSTANCE.getNoUser();
+        Set.INSTANCE.out(nick + " out");
     }
 
     String getNick() {
-        if (nick==null) nick = Set.noUser;
+        if (nick==null) nick = Set.INSTANCE.getNoUser();
         //Set.out("get "+nick);
     return nick;
     }
@@ -44,25 +44,25 @@ public class User { //свойства клиента TODO внести сюда
 
     void auth(String login, String password) {
 
-        if(Set.debug_mode){//пропускаем логин, ставим юзера по дефолту
-            nick = Set.testUser; //заглушка
+        if(Set.INSTANCE.getDebug_mode()){//пропускаем логин, ставим юзера по дефолту
+            nick = Set.INSTANCE.getTestUser(); //заглушка
             online = true;
             admin = true;
-            Set.out( getNick()+ " GRANTED");
+            Set.INSTANCE.out( getNick()+ " GRANTED");
         }else
 //       if (DBManager.getInstance().checkUser(login, password))
             if (DBManager.checkUser(login, password))
             {//логин успешен
                 online = true;
                 admin = true;
-                Set.out( getNick()+ " GRANTED");
+                Set.INSTANCE.out( getNick()+ " GRANTED");
             }//логин успешен
             else
             {//логин неуспешен
-                nick = Set.noUser;
+                nick = Set.INSTANCE.getNoUser();
                 online = false;
                 admin = false;
-                if (Set.debug_mode) System.out.println(" DENIED");
+                if (Set.INSTANCE.getDebug_mode()) System.out.println(" DENIED");
             }//логин неуспешен
     }
 }//User

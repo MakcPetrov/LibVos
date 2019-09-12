@@ -16,7 +16,7 @@ class MainWindow extends JFrame {
         setSize(800, 600);
         setLocationRelativeTo(null);
         setResizable(true);//а пусть будет
-        setTitle(Set.TAG);
+        setTitle(Set.INSTANCE.getTAG());
         JTextField login = new JTextField();
         JPasswordField password = new JPasswordField();
 
@@ -28,7 +28,7 @@ class MainWindow extends JFrame {
             switchWindows(user);//включаем в актуальный режим
             password.setText("");
         });//password.ActionListener
-        JButton authIn = new JButton(Set.loginBt);//кнопка авторизации
+        JButton authIn = new JButton(Set.INSTANCE.getLoginBt());//кнопка авторизации
         authIn.addActionListener(e -> {
             user.auth(login.getText(), new String(password.getPassword()));
             switchWindows(user);//включаем в актуальный режим
@@ -50,41 +50,41 @@ class MainWindow extends JFrame {
 
         //кнопки вызова режимов работы
 
-        JButton bookListButon = new JButton(Set.books);
+        JButton bookListButon = new JButton(Set.INSTANCE.getBooks());
         bookListButon.addActionListener(e -> {
-            Set.out(Set.books);
+            Set.INSTANCE.out(Set.INSTANCE.getBooks());
             BookListWindow bookListWindow = new BookListWindow();
         });
 
-        JButton newBookButton = new JButton(Set.newBook);
+        JButton newBookButton = new JButton(Set.INSTANCE.getNewBook());
         newBookButton.addActionListener(e -> {
-            Set.out(Set.newBook);
+            Set.INSTANCE.out(Set.INSTANCE.getNewBook());
         });
 
-        JButton userListButton = new JButton(Set.users);
+        JButton userListButton = new JButton(Set.INSTANCE.getUsers());
         userListButton.addActionListener(e -> {
-            Set.out(Set.users);
+            Set.INSTANCE.out(Set.INSTANCE.getUsers());
         });
 
-        JButton newUserButton = new JButton(Set.newUser);
+        JButton newUserButton = new JButton(Set.INSTANCE.getNewUser());
         newUserButton.addActionListener(e -> {
-            Set.out(Set.newUser);
+            Set.INSTANCE.out(Set.INSTANCE.getNewUser());
         });
 
-        JButton preferencesButton = new JButton(Set.preferences);
+        JButton preferencesButton = new JButton(Set.INSTANCE.getPreferences());
         preferencesButton.addActionListener(e -> {
-            Set.out(Set.preferences);
+            Set.INSTANCE.out(Set.INSTANCE.getPreferences());
             PreferencesWindows preferencesWindows = new PreferencesWindows();
         });
 
-        JButton logsButton = new JButton(Set.logs);
+        JButton logsButton = new JButton(Set.INSTANCE.getLogs());
         logsButton.addActionListener(e -> {
-            Set.out(Set.logs);
+            Set.INSTANCE.out(Set.INSTANCE.getLogs());
         });
 
-        JButton listsButton = new JButton(Set.lists);
+        JButton listsButton = new JButton(Set.INSTANCE.getLists());
         listsButton.addActionListener(e -> {
-            Set.out(Set.lists);
+            Set.INSTANCE.out(Set.INSTANCE.getLists());
         });
 
         JButton logoutButton  = new JButton("Logout");//кнопка выхода
@@ -95,9 +95,9 @@ class MainWindow extends JFrame {
             password.setText("");
         });
 
-        JButton exitButon = new JButton(Set.exit);
+        JButton exitButon = new JButton(Set.INSTANCE.getExit());
         exitButon.addActionListener(e -> {
-            Set.out(Set.exit);
+            Set.INSTANCE.out(Set.INSTANCE.getExit());
             System.exit(1);
 //            setVisible(false);
         });

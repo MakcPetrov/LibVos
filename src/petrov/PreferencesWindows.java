@@ -11,25 +11,25 @@ public class PreferencesWindows extends JFrame {
         setSize(600, 400);
         setLocationRelativeTo(null);
         setResizable(true);//а пусть будет
-        setTitle(Set.preferences);
-        Set.out("Preferences created");
+        setTitle(Set.INSTANCE.getPreferences());
+        Set.INSTANCE.out("Preferences created");
 
         //панель работы
         JPanel workPanel = new JPanel(new GridLayout(20, 3));
 
-        JButton ownerButon = new JButton(Set.owner);
+        JButton ownerButon = new JButton(Set.INSTANCE.getOwner());
         ownerButon.addActionListener(e -> {
-            Set.out(Set.owner);
+            Set.INSTANCE.out(Set.INSTANCE.getOwner());
         });
 
-        JButton pathButon = new JButton(Set.path);
+        JButton pathButon = new JButton(Set.INSTANCE.getPath());
         pathButon.addActionListener(e -> {
-            Set.out(Set.path);
+            Set.INSTANCE.out(Set.INSTANCE.getPath());
         });
 
-        JButton exitButon = new JButton(Set.exit);
+        JButton exitButon = new JButton(Set.INSTANCE.getExit());
         exitButon.addActionListener(e -> {
-            Set.out(this.getTitle() + " " + Set.exit);
+            Set.INSTANCE.out(this.getTitle() + " " + Set.INSTANCE.getExit());
             setVisible(false);
         });
 
@@ -41,7 +41,7 @@ public class PreferencesWindows extends JFrame {
 
         add(workPanel, BorderLayout.CENTER);//главное окно занимает весь бокс
         setVisible(true);
-        Set.out("Preferences closed");
+        Set.INSTANCE.out("Preferences closed");
     }//Preferences
 
 }

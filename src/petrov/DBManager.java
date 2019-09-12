@@ -18,7 +18,7 @@ class DBManager {//Менеджер базы данных
         String query = "select count(*) from books";
 
         try {
-            connection = DriverManager.getConnection(Set.url, Set.user, Set.password);
+            connection = DriverManager.getConnection(Set.INSTANCE.getUrl(), Set.INSTANCE.getUser(), Set.INSTANCE.getPassword());
             statement = connection.createStatement();
             resultSet = statement.executeQuery(query);
 

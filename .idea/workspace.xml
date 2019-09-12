@@ -2,12 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6ca5e09a-1842-474b-ba55-ec3ef61d6a1e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/petrov/Set.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/petrov/BookList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/petrov/BookListWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LibVos.iml" beforeDir="false" afterPath="$PROJECT_DIR$/LibVos.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/petrov/BookListWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/petrov/BookListWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/petrov/DBManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/petrov/DBManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/petrov/LibVos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/petrov/LibVos.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/petrov/MainWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/petrov/MainWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/petrov/Preferences.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/petrov/PreferencesWindows.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/petrov/Set.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/petrov/Set.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/petrov/UserList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/petrov/UserListWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/petrov/PreferencesWindows.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/petrov/PreferencesWindows.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/petrov/Set.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/petrov/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/petrov/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/petrov/UserListWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/petrov/UserListWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/petrov/plan.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/petrov/plan.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,6 +28,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Kotlin File" />
       </list>
     </option>
   </component>
@@ -39,15 +49,10 @@
     <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="89" />
-    <option name="y" value="29" />
-    <option name="width" value="1162" />
-    <option name="height" value="868" />
-  </component>
   <component name="ProjectId" id="1Q3Q55EVGGKGbt9chF210a3Z32c" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1561471315959" />
     <property name="last_opened_file_path" value="C:/Program Files/Git/bin/git.exe" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -183,7 +188,14 @@
       <option name="project" value="LOCAL" />
       <updated>1566997608439</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="mysql added">
+      <created>1566999545300</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1566999545300</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -191,7 +203,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
