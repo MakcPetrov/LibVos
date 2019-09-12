@@ -1,13 +1,14 @@
-package petrov;
+package petrov
 
-public class LibVos {
+object LibVos {
 
-    public static void main(String[] args) {
+    @JvmStatic
+    fun main(args: Array<String>) {
 
-        if (Set.INSTANCE.getDebug_mode()) Set.INSTANCE.out(DBManager.testDB());
+        if (Set.debug_mode) Set.out(DBManager.testDB())
 
-        User user = new User();//создать экземпляр пользака
-        new MainWindow(user);//создать окно и дать ему юзера
+        val user = User()//создать экземпляр пользака
+        MainWindow(user)//создать окно и дать ему юзера
 
     }
 

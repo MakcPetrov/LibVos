@@ -2,21 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6ca5e09a-1842-474b-ba55-ec3ef61d6a1e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/petrov/Set.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/petrov/Book.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/petrov/BookListWindow.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/petrov/DBManager.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/petrov/LibVos.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/petrov/User.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/petrov/UserListWindow.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LibVos.iml" beforeDir="false" afterPath="$PROJECT_DIR$/LibVos.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/petrov/BookListWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/petrov/BookListWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/petrov/DBManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/petrov/DBManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/petrov/LibVos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/petrov/LibVos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/petrov/MainWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/petrov/MainWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/petrov/PreferencesWindows.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/petrov/PreferencesWindows.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/petrov/Set.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/petrov/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/petrov/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/petrov/UserListWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/petrov/UserListWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/petrov/plan.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/petrov/plan.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/petrov/Book.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/petrov/BookListWindow.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/petrov/DBManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/petrov/LibVos.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/petrov/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/petrov/UserListWindow.java" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -195,7 +193,14 @@
       <option name="project" value="LOCAL" />
       <updated>1566999545300</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="mysql added">
+      <created>1568317492207</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1568317492208</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

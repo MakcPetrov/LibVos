@@ -1,10 +1,10 @@
-package petrov;
+package petrov
 
-import javax.swing.*;
+import javax.swing.*
 
-public class UserListWindow extends JFrame {
-    UserListWindow(){
-    Set.INSTANCE.out("UserList created");
+class UserListWindow internal constructor() : JFrame() {
+    init {
+        Set.out("UserList created")
 
     }//UserList
 

@@ -1,16 +1,16 @@
-package petrov;
+package petrov
 
-import javax.swing.*;
+import javax.swing.*
 
-public class BookListWindow extends JFrame {
-    BookListWindow(){
-        setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
-        setSize(600, 400);
-        setLocationRelativeTo(null);
-        setResizable(true);//а пусть будет
-        setTitle(Set.INSTANCE.getBooks());
+class BookListWindow internal constructor() : JFrame() {
+    init {
+        defaultCloseOperation = WindowConstants.DISPOSE_ON_CLOSE
+        setSize(600, 400)
+        setLocationRelativeTo(null)
+        isResizable = true//а пусть будет
+        title = Set.books
 
-        Set.INSTANCE.out("BookList created");
+        Set.out("BookList created")
     }//BookList
 
 }
